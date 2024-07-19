@@ -1,0 +1,30 @@
+{
+  "name": "workspace",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "dev": "bun run index.ts | jq > log.json",
+    "build:deploy": "bun build index.ts index.js --outdir .",
+    "start": "bunx pm2 index.js"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@auth/core": "^0.34.1",
+    "@convex-dev/auth": "^0.0.36",
+    "@spotify/web-api-ts-sdk": "^1.2.0",
+    "@types/bcrypt": "^5.0.2",
+    "bcrypt": "^5.1.1",
+    "convex": "^1.13.0",
+    "convex-helpers": "^0.1.47",
+    "fastify": "^4.28.1",
+    "fastify-plugin": "^4.5.1",
+    "jose": "^5.6.3",
+    "next-auth": "^5.0.0-beta.19",
+    "pm2": "^5.4.2"
+  }
+}
